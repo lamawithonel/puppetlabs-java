@@ -53,7 +53,7 @@ The following parameters are available in `java`:
 
 ##### `distribution`
 Specifies the Java distribution to install.  
-Valid options:  'jdk', 'jre', or, where the platform supports alternative packages, 'sun-jdk', 'sun-jre', 'oracle-jdk', 'oracle-jre'. Default: 'jdk'.
+Valid options:  'jdk', 'jre', or, where the platform supports alternative packages, 'sun-jdk', 'sun-jre', 'oracle-jdk', 'oracle-jre', 'oracle-jdk8' or 'oracle-jre8'. Default: 'jdk'.
 
 #####`java_alternative`
 Specifies the name of the Java alternative to use. If you set this parameter, *you must also set the `java_alternative_path`.*  

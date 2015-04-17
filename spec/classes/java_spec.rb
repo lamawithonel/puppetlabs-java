@@ -74,6 +74,20 @@ describe 'java', :type => :class do
     it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set j2re1.7-oracle --jre') }
   end
 
+  context 'select Oracle JRE 8 for Debian Wheezy' do
+    let(:facts) { {:osfamily => 'Debian', :operatingsystem => 'Debian', :lsbdistcodename => 'wheezy', :operatingsystemrelease => '7.1', :architecture => 'amd64',} }
+    let(:params) { { 'distribution' => 'oracle-jre8' } }
+    it { should contain_package('java').with_name('oracle-j2re1.8') }
+    it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set j2re1.8-oracle --jre') }
+  end
+
+  context 'select Oracle JDK 8 for Debian Wheezy' do
+    let(:facts) { {:osfamily => 'Debian', :operatingsystem => 'Debian', :lsbdistcodename => 'wheezy', :operatingsystemrelease => '7.1', :architecture => 'amd64',} }
+    let(:params) { { 'distribution' => 'oracle-jdk8' } }
+    it { should contain_package('java').with_name('oracle-j2sdk1.8') }
+    it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set j2sdk1.8-oracle --jre') }
+  end
+
   context 'select OpenJDK JRE for Debian Wheezy' do
     let(:facts) { {:osfamily => 'Debian', :operatingsystem => 'Debian', :lsbdistcodename => 'wheezy', :operatingsystemrelease => '7.1', :architecture => 'amd64',} }
     let(:params) { { 'distribution' => 'jre' } }

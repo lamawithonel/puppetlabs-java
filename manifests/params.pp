@@ -107,6 +107,18 @@ class java::params {
               'alternative_path' => '/usr/lib/jvm/j2sdk1.7-oracle/jre/bin/java',
               'java_home'        => '/usr/lib/jvm/j2sdk1.7-oracle/jre/',
             },
+            'oracle-jre8' => {
+              'package'          => 'oracle-j2re1.8',
+              'alternative'      => 'j2re1.8-oracle',
+              'alternative_path' => '/usr/lib/jvm/j2re1.8-oracle/bin/java',
+              'java_home'        => '/usr/lib/jvm/j2re1.8-oracle/',
+            },
+            'oracle-jdk8' => {
+              'package'          => 'oracle-j2sdk1.8',
+              'alternative'      => 'j2sdk1.8-oracle',
+              'alternative_path' => '/usr/lib/jvm/j2sdk1.8-oracle/jre/bin/java',
+              'java_home'        => '/usr/lib/jvm/j2sdk1.8-oracle/jre/',
+            },
           }
         }
         'vivid': {
